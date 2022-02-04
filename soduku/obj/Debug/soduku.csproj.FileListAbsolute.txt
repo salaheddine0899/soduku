@@ -1,0 +1,11 @@
+C:\Users\pc\Documents\pooa\soduku\soduku\bin\Debug\soduku.exe.config
+C:\Users\pc\Documents\pooa\soduku\soduku\bin\Debug\soduku.exe
+C:\Users\pc\Documents\pooa\soduku\soduku\bin\Debug\soduku.pdb
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.csproj.AssemblyReference.cache
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.Properties.Resources.resources
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.csproj.GenerateResource.cache
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.exe
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.pdb
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Debug\soduku.Form1.resources

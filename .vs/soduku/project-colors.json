@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "98099349-7413-4711-b267-4076e838ad33": {
+      "ProjectGuid": "98099349-7413-4711-b267-4076e838ad33",
+      "DisplayName": "soduku",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
