@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buCheck = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -38,11 +39,22 @@
             this.panel1.Size = new System.Drawing.Size(483, 392);
             this.panel1.TabIndex = 0;
             // 
+            // buCheck
+            // 
+            this.buCheck.Location = new System.Drawing.Point(578, 52);
+            this.buCheck.Name = "buCheck";
+            this.buCheck.Size = new System.Drawing.Size(100, 30);
+            this.buCheck.TabIndex = 1;
+            this.buCheck.Text = "check inputs";
+            this.buCheck.UseVisualStyleBackColor = true;
+            this.buCheck.Click += new System.EventHandler(this.check_click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 450);
+            this.ClientSize = new System.Drawing.Size(715, 450);
+            this.Controls.Add(this.buCheck);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -53,6 +65,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buCheck;
     }
 }
 

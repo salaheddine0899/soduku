@@ -13,6 +13,7 @@ namespace soduku
     public partial class Form1 : Form
     {
         SodukuCell[,] buttons=new SodukuCell[9,9];
+        List<SodukuCell> wrongCells = new List<SodukuCell>();
 
         private void createCells()
         {
@@ -43,7 +44,12 @@ namespace soduku
                 if (value == 0)
                     cell.clear();
                 else
-                    cell.Text =value.ToString();
+                {
+                    cell.Text = value.ToString();
+                    cell.Value= value;
+
+                }
+                    
                 cell.ForeColor = SystemColors.ControlDarkDark;
             }
 
@@ -56,31 +62,11 @@ namespace soduku
                 cell.Value= 0;
                 cell.clear();
             }
-            FindValueForNextCel(0, -1);
+            //FindValueForNextCel(0, -1);
+            //ShowRandomValuesHints(45);
         }
 
-        Random random = new Random();
 
-        private bool FindValueForNextCel(int i,int j)
-        {
-            if (++j > 8)
-            {
-                if (++i > 8) return true;
-            }
-
-            int value = 0;
-            var numsLeft=new List<int> { 1,2,3,4,5,6,7,8,9};
-            do {
-                if (numsLeft.Count < 1)
-                {
-                    buttons[i, j].Value = 0;
-                }
-                value = numsLeft[random.Next(0, numsLeft.Count)];
-                buttons[i+1, j].Value = value;
-                numsLeft.Remove(value);
-            } while ((!IsValideNumber(value,i,j)||(!FindValueForNextCel(i,j))));
-            return true;
-        }
         private bool IsValideNumber(int value,int x,int y)
         {
             for(int i = 0; i < 9; i++)
@@ -90,9 +76,11 @@ namespace soduku
                 if ((i != y) && (buttons[y, i].Value == value))
                     return false;
             }
-            for(int i = x - (x % 3); i < x - (x % 3) + 3; i++)
+            var cellX = x - (x % 3);
+            var cellY = y - (y % 3);
+            for (int i = cellX; i < cellX + 3; i++)
             {
-                for(int j = y - (y % 3) + 3; j < y - (y % 3) + 3; j++)
+                for(int j = cellY; j < cellY + 3; j++)
                 {
                     if ((i != x) && (j != y) && (buttons[i, j].Value == value))
                         return false;
@@ -100,6 +88,7 @@ namespace soduku
             }
             return true;
         }
+
         public Form1()
         {
             InitializeComponent();
@@ -107,5 +96,26 @@ namespace soduku
             StartNewGame();
         }
 
+        private void check_click(object sender, EventArgs e)
+        {
+            for (int i=0;i<9;i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (!IsValideNumber(buttons[i,j].Value, i, j))
+                    {
+                        wrongCells.Add(buttons[i, j]);
+                    }
+
+                }
+
+                if(wrongCells.Count > 0)
+                {
+                    wrongCells.ForEach(x =>x.ForeColor=Color.Red);
+                    MessageBox.Show("wrong input");
+                }
+                
+            }
+        }
     }
 }

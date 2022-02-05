@@ -8,3 +8,4 @@ C:\Users\pc\Documents\pooa\soduku\soduku\obj\Release\soduku.csproj.GenerateResou
 C:\Users\pc\Documents\pooa\soduku\soduku\obj\Release\soduku.csproj.CoreCompileInputs.cache
 C:\Users\pc\Documents\pooa\soduku\soduku\obj\Release\soduku.exe
 C:\Users\pc\Documents\pooa\soduku\soduku\obj\Release\soduku.pdb
+C:\Users\pc\Documents\pooa\soduku\soduku\obj\Release\soduku.csproj.AssemblyReference.cache
